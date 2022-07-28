@@ -7,15 +7,12 @@
   --bright-blue: hsl(245, 75%, 52%);
 
   /* NEUTRAL COLORS */
-
   --very-pale-blue: hsl(225, 100%, 98%);
   --desaturated-blue: hsl(224, 23%, 55%);
   --dark-blue: hsl(223, 47%, 23%);
 
   /* FONTS */
-
   --main-font: 'Red Hat Display', sans-serif;
-
 }
 
 *, *::after, *::before {
@@ -24,4 +21,164 @@
 
 html {
   box-sizing: border-box;
+}
+
+body {
+  font-family: var(--main-font);
+  min-height: 100vh;
+  background-color: var(--pale-blue);
+  background-image: url('/images/pattern-background-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  max-width: 325px;
+  border-radius: 1rem;
+  background-color: var(--white);
+  box-shadow: -2px 10px 24px -11px rgba(0, 0, 0, 0.62);
+}
+
+.card__image img {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card__content {
+  padding: 1rem 1.3rem;
+}
+
+.card__title {
+  font-weight: 900;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.card__description {
+  text-align: center;
+  color: var(--desaturated-blue);
+  margin: 1rem;
+  line-height: 1.6;
+}
+
+.plan {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--very-pale-blue);
+  margin-top: 1.4rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  height: 80px;
+}
+
+.plan__image {
+  flex-basis: 30%;
+  display: flex;
+}
+
+.plan__music-icon {
+  width: 60%;
+  margin: auto;
+}
+
+.plan__details {
+  flex-basis: 40%;
+  align-content: center;
+  /* margin-top: 0.5rem; */
+}
+
+.plan__title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  margin-top: 1.4rem;
+}
+
+.plan__price {
+  font-size: 0.9rem;
+  color: var(--desaturated-blue);
+  margin-top: 0;
+}
+
+.plan__change {
+  font-size: 0.8rem;
+  flex-basis: 30%;
+  align-self: center;
+  text-align: center;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0.4rem 0;
+}
+
+.btn--payment {
+  background-color: var(--bright-blue);
+  color: var(--white);
+  box-shadow: 5px 10px 20px hsl(245, 75%, 90%);
+}
+
+.btn--cancel {
+  background-color: transparent;
+  color: var(--desaturated-blue);
+}
+
+.btn--payment:hover,
+.btn--cancel:hover,
+.plan__change a:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 640px) {
+  body {
+    background-image: url('/images/pattern-background-desktop.svg');
+  }
+
+  .card {
+    max-width: 450px;
+  }
+
+  .card__content {
+    padding: 2rem 3rem;
+  }
+
+  .card__title {
+    font-size: 1.6rem;
+  }
+
+  .plan {
+    margin-top: 0;
+    height: 100px;
+  }
+
+  .plan__music-icon {
+    width: 50%;
+  }
+
+  .plan__title {
+    font-size: 1rem;
+    margin-top: 1.8rem;
+  }
+
+  .plan__price {
+    font-size: 1rem;
+  }
+
+  .btns {
+    margin-top: 2rem;
+  }
 }
