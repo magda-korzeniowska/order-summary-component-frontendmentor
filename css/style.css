@@ -9,6 +9,7 @@
   /* NEUTRAL COLORS */
   --very-pale-blue: hsl(225, 100%, 98%);
   --desaturated-blue: hsl(224, 23%, 55%);
+  --blue: hsl(228, 45%, 44%);
   --dark-blue: hsl(223, 47%, 23%);
 
   /* FONTS */
@@ -33,6 +34,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .card {
@@ -140,6 +142,17 @@ body {
 .plan__change a:hover {
   cursor: pointer;
   opacity: 0.7;
+  text-decoration: none;
+}
+
+.attribution {
+  font-size: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.attribution a {
+  color: var(--blue);
   text-decoration: none;
 }
 
